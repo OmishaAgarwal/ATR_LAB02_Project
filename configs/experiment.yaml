@@ -1,0 +1,25 @@
+# PROVISIONAL scaffold copied from ATR_Colab_Project_Scaffold.zip.
+# Not a frozen confirmatory configuration and not proof that all settings ran.
+# Compare with notebook-specific settings and the frozen protocol before use.
+# Initial experiment scaffold. Values must be frozen before test runs.
+model:
+  id: Qwen/Qwen2.5-1.5B-Instruct
+  revision: main  # Replace with an immutable commit hash after resolving it.
+  max_new_tokens: 192
+  do_sample: false
+
+experiment:
+  conditions: [B1_direct, B2_reflection, P_verifier_reflection]
+  horizons: [4, 8, 12]
+  master_seed: 20261030
+  max_model_calls_per_episode: 24
+  max_action_attempts_multiplier: 2
+  max_repair_cycles_per_decision: 2
+  primary_metric: injected_error_recovery_rate
+  primary_comparison: P_verifier_reflection_minus_B2_reflection
+
+paths:
+  task_manifests: data/manifests
+  task_templates: data/task_templates
+  logs: results/logs
+  figures: results/figures
