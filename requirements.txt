@@ -1,0 +1,16 @@
+# Dependency snapshot from the supplied Colab scaffold.
+# IMPORTANT: these pins are NOT a verified clean-install set. The notebook
+# records dependency conflicts in an environment smoke test. See README.md
+# and baseline_validation.md before installing. PyTorch/CUDA is runtime-specific.
+
+# Proposed pins; compatibility is NOT assumed.
+# Keep the Colab-provided torch/CUDA installation initially.
+transformers==4.46.3
+accelerate==1.1.1
+huggingface_hub==0.26.2
+safetensors==0.4.5
+
+# Optional analysis/data packages; install only when needed:
+# datasets==3.1.0
+# pandas==2.2.3
+# matplotlib==3.9.2

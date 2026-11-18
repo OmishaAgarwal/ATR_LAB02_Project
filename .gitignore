@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+.DS_Store
+# Never commit credentials, private datasets, or model cache/weights.
+data/raw/
+data/private/
+.cache/
+huggingface/
+# Keep result placeholders, but inspect and intentionally add genuine outputs.
+results/logs/*
+!results/logs/README.md
+results/figures/*
+!results/figures/README.md
